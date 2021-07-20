@@ -38,10 +38,6 @@ const SignupForm = () => {
         variables: { ...userFormData },
       });
 
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
-
       Auth.login(data.addUser.token);
       setUserFormData({
         username: "",
